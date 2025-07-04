@@ -1,11 +1,11 @@
 import NavBar from "./navbar/NavBar";
 
-export interface PaginaProps {
+export interface MainLayoutProps {
   children: any
   className?: string
 }
 
-export default function Pagina(props: PaginaProps) {
+export default function MainLayout(props: MainLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
       <NavBar />

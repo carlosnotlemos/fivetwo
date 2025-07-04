@@ -1,6 +1,6 @@
 'use client'
-import useUsuarios from "@/app/components/hooks/useUsuarios";
-import Pagina from "@/app/components/template/Pagina";
+import useUsuarios from "@/hooks/useUsuarios";
+import MainLayout from "@/app/components/template/MainLayout";
 import Titulo from "@/app/components/template/Titulo";
 import FormularioUsuario from "@/app/components/usuario/Formulario";
 import ListaUsuario from "@/app/components/usuario/ListaUsuario";
@@ -10,7 +10,7 @@ export default function Page(){
   const { usuario, usuarios, salvar, excluir, alterarUsuario } = useUsuarios()
 
   return (
-    <Pagina className="flex flex-col gap-10">
+    <MainLayout className="flex flex-col gap-10">
       <Titulo principal="Usuários" secundario="Cadastro Usuários" icone={IconUser}/>
 
       {usuario ? (
@@ -33,6 +33,6 @@ export default function Page(){
           </>
       )}
 
-    </Pagina>
+    </MainLayout>
   );
 }
