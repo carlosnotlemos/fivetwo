@@ -8,7 +8,7 @@ export default function ProdutoCard({ produto }: { produto: Produto }) {
       <img
         src={produto.imagemUrl}
         alt={produto.nome}
-        className="w-full h-auto object-contain aspect-square hover:opacity-75"
+        className="lg:h-[420px] lg:w-[420px] object-contain hover:opacity-75"
       />
     </Link>
   );

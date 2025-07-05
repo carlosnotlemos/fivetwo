@@ -12,10 +12,12 @@ export default function ProdutosLista() {
   }, []);
 
   return (
-    <section className="grid grid-cols-1 sm:grid-cols-3 gap-0 sm:gap-6">
-      {produtos.map(produto => (
-        <ProdutoCard key={produto.id} produto={produto} />
-      ))}
+    <section className="max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-6 justify-items-center">
+        {produtos.map(produto => (
+          <ProdutoCard key={produto.id} produto={produto} />
+        ))}
+      </div>
     </section>
   );
 }
