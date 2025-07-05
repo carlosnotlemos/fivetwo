@@ -1,16 +1,15 @@
 'use client'
 import { Produto } from "@/core/model/Produto";
+import Link from "next/link";
 
 export default function ProdutoCard({ produto }: { produto: Produto }) {
   return (
-    <div className="bg-white rounded-lg shadow p-4 text-black">
+    <Link href={produto.imagemUrl}>
       <img
         src={produto.imagemUrl}
         alt={produto.nome}
-        className="w-full h-auto object-contain aspect-square rounded"
+        className="w-full h-auto object-contain aspect-square hover:opacity-75"
       />
-      <h2 className="mt-2 font-semibold text-lg">{produto.nome}</h2>
-      <p className="text-green-600 font-bold">R$ {produto.preco.toFixed(2)}</p>
-    </div>
+    </Link>
   );
 }
