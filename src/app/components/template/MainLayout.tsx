@@ -8,8 +8,8 @@ export interface MainLayoutProps {
 export default function MainLayout(props: MainLayoutProps) {
   return (
     <div className="flex flex-col min-h-screen">
-      <header className="relative w-full">
-        <NavBar />
+      <NavBar />
+      <header className="w-full">
         <img
           src="/bclaro.png"
           alt="Descrição da imagem"

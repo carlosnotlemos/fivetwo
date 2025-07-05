@@ -1,29 +1,40 @@
-import { IconFlameFilled } from "@tabler/icons-react";
+import { IconFlameFilled, IconShoppingCart } from "@tabler/icons-react";
 import NavItem from "./NavItem";
 import InputTexto from "../../shared/ImputTexto";
 
 export default function NavBar() {
   return (
-    <nav className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10
-                    w-[95%] max-w-6xl
-                    flex flex-wrap items-center justify-between gap-4
-                    bg-black/20 py-4 px-6 rounded-lg
-                    backdrop-blur-md shadow-md">
-      
-      <div className="flex items-center gap-4 flex-wrap text-white">
-        <IconFlameFilled className="text-2xl" />
-        <NavItem texto="Femininos" url="/" />
-        <NavItem texto="Masculinos" url="/" />
-        <NavItem texto="Promoções" url="/" />
-        <NavItem texto="Namorados" url="/" />
+    <nav className="bg-white">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="flex justify-center py-6 items-center gap-4 text-black">
+          <h2 className="text-5xl">FiveTwo</h2>
+          <IconFlameFilled className="hidden sm:block" />
+          <form className="hidden sm:block" role="search">
+            <InputTexto 
+              className="px-4 py-2 w-full sm:w-96 rounded-lg bg-transparent outline-none ring-2 ring-black"
+              placeholder="Procure por categoria..."
+            />
+          </form>
+          <div className="relative ml-6">
+            <IconShoppingCart className="text-2xl" />
+            <span className="absolute -top-2 -right-2 bg-red-600 text-white text-xs font-semibold w-5 h-5 flex items-center justify-center rounded-full">
+              3
+            </span>
+          </div>
+        </div>
       </div>
-
-      <form className="hidden sm:block sm:ml-auto" role="search">
-        <InputTexto 
-          className="px-4 py-2 w-full sm:w-96 rounded-lg bg-white/10 text-white focus:outline-none focus:ring-2 focus:ring-white"
-          placeholder="Procure por categoria..."
-        />
-      </form>
+      <div className="overflow-x-auto px-4">
+        <div className="flex text-md text-gray-700 w-fit min-w-max mx-auto gap-12 py-3 items-center px-4">
+          <NavItem texto="Femininos"  url="/"/>
+          <NavItem texto="Masculinos" url="/"/>
+          <NavItem texto="Promoções"  url="/"/>
+          <NavItem texto="Namorados"  url="/"/>
+          <NavItem texto="Femininos"  url="/"/>
+          <NavItem texto="Masculinos" url="/"/>
+          <NavItem texto="Promoções"  url="/"/>
+          <NavItem texto="Namorados"  url="/"/>
+        </div>
+      </div>
     </nav>
   );
 }
