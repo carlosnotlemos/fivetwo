@@ -12,7 +12,7 @@ export default function MaisUsadosLista() {
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto my-64">
+    <section className="max-w-7xl mx-auto my-12 lg:my-45">
       <h2 className="text-3xl font-bold font-sans tracking-tight text-center">
         FAVORITOS COM PREÇO IRRESISTÍVEL
       </h2>

@@ -3,9 +3,9 @@ import { Produto } from "@/core/model/Produto";
 
 export default function ProdutoCard({ produto }: { produto: Produto }) {
   return (
-    <div className="group relative bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
+    <div className="group m-2 relative bg-white rounded-xl overflow-hidden shadow-md transition-all duration-300 hover:shadow-lg">
       {/* Imagem */}
-      <div className="w-full h-[420px] bg-gray-100 flex items-center justify-center overflow-hidden">
+      <div className="w-full h-[400px] bg-gray-100 flex items-center justify-center overflow-hidden">
         <img
           src={produto.imagemUrl}
           alt={produto.nome}
