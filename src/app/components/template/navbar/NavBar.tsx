@@ -4,8 +4,8 @@ import InputTexto from "../../shared/ImputTexto";
 
 export default function NavBar() {
   return (
-    <nav className="bg-white">
-      <div className="max-w-6xl mx-auto px-4">
+    <nav className="bg-white fixed top-0 w-full bg-white z-50 shadow">
+      <div className="max-w-6xl mx-auto px-4 ">
         <div className="flex justify-center py-6 items-center gap-4 text-black">
           <h2 className="text-5xl">FiveTwo</h2>
           <IconFlameFilled className="hidden sm:block" />
