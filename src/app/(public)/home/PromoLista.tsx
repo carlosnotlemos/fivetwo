@@ -15,7 +15,7 @@ export default function PromoLista() {
     <section className="max-w-7xl mx-auto">
       <ul className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-6 justify-items-center">
         {produtos.map(produto => (
-          <li><PromoCard key={produto.id} produto={produto} /></li>
+          <li key={produto.id}><PromoCard produto={produto} /></li>
         ))}
       </ul>
     </section>

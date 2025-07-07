@@ -15,7 +15,7 @@ export default function VideoInstagram({ url }: VideoInstagramProps) {
   }, [])
 
   return (
-    <div className="max-w-xl mx-auto py-10">
+    <article className="max-w-xl mx-auto py-10">
       <blockquote
         className="instagram-media"
         data-instgrm-permalink={url}
@@ -29,6 +29,6 @@ export default function VideoInstagram({ url }: VideoInstagramProps) {
           width: "100%",
         }}
       ></blockquote>
-    </div>
+    </article>
   )
 }
