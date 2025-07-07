@@ -16,11 +16,13 @@ export default function MaisUsadosLista() {
       <h2 className="text-3xl font-bold font-sans tracking-tight text-center">
         FAVORITOS COM PREÇO IRRESISTÍVEL
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-6 justify-items-center my-5">
+      <ul className="grid grid-cols-1 lg:grid-cols-3 gap-0 lg:gap-6 justify-items-center my-5">
         {produtos.map(produto => (
-          <ProdutoCard key={produto.id} produto={produto} />
+          <li key={produto.id}>
+            <ProdutoCard produto={produto} />
+          </li>
         ))}
-      </div>
+      </ul>
     </section>
   );
 }
