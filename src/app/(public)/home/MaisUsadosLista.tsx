@@ -1,18 +1,18 @@
 'use client'
 import { useEffect, useState } from "react";
 import { Produto } from "@/core/model/Produto";
-import { obterProdutos } from "@/backend/produto/produtos";
+import { obterProdutos2 } from "@/backend/produto/produtos";
 import ProdutoCard from "@/app/components/shared/ProdutoCard";
 
 export default function MaisUsadosLista() {
   const [produtos, setProdutos] = useState<Produto[]>([]);
 
   useEffect(() => {
-    obterProdutos().then(setProdutos);
+    obterProdutos2().then(setProdutos);
   }, []);
 
   return (
-    <section className="max-w-7xl mx-auto my-12 lg:my-45">
+    <section className="max-w-7xl mx-auto">
       <h2 className="text-3xl font-bold font-sans tracking-tight text-center">
         FAVORITOS COM PREÇO IRRESISTÍVEL
       </h2>
