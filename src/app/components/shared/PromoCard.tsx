@@ -6,7 +6,7 @@ import Link from "next/link";
 export default function PromoCard({ produto }: { produto: Produto }) {
   return (
     <Link href={produto.imagemUrl}>
-      <div className="w-[280px] h-[600px] bg-white rounded-xl shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
+      <div className="w-[280px] h-[600px] bg-white rounded-md shadow-md overflow-hidden flex flex-col hover:shadow-lg transition">
         <div className="w-full h-[420px] bg-gray-100 flex items-center justify-center">
           <img
             src={produto.imagemUrl}

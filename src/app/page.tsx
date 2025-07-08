@@ -1,5 +1,6 @@
-import InstagramVideoLista from './(public)/home/InstagramVideoLista';
 import MaisUsadosLista from './(public)/home/MaisUsadosLista';
+import OutrosProdutosLista from './(public)/home/OutrosProdutosLista';
+import ProdutoLista from './(public)/home/ProdutoLista';
 import PromoLista from './(public)/home/PromoLista';
 import SlideText from './(public)/home/SlideText';
 import BannerLg from './components/shared/BannerLg';
@@ -15,7 +16,8 @@ export default function Home() {
       <MaisUsadosLista />
       <PromoLista />
       <SlideText />
-      <InstagramVideoLista />
+      <OutrosProdutosLista />
+      <ProdutoLista />
     </MainLayout>
   );
 }
