@@ -40,7 +40,7 @@ export default function PromoLista() {
   }
 
   return (
-    <section className="bg-neutral-100 py-10">
+    <section className="bg-neutral-100 pt-10 pb-7">
       <div className="w-full">
         {/* Título */}
         <h1 className="text-4xl font-bold mb-2 ml-40">DIA DOS PAIS 🩵</h1>
