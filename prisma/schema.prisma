@@ -25,5 +25,7 @@ model Produto {
   id        Int    @id @default(autoincrement())
   nome      String
   preco     Float
-  imagemUrl String
+  imagemurl String
+
+  @@map("produto")
 }

@@ -5,7 +5,7 @@ export default function ProdutoCard({ produto }: { produto: Produto }) {
   return (
     <div className="w-[350px] h-[600px] overflow-hidden rounded-xl shadow-lg bg-black">
       <video
-        src={produto.imagemUrl}
+        src={produto.imagemurl}
         className="w-full h-full object-cover"
         autoPlay
         muted
