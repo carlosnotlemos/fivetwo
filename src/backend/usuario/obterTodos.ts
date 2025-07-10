@@ -1,7 +1,7 @@
-'use server'
+// 'use server'
 
-import RepositorioUsuario from "./RepositorioUsuario";
+// import RepositorioUsuario from "./RepositorioUsuario";
 
-export default async function obterTodos(){
-  return RepositorioUsuario.obertTodos()
-}
+// export default async function obterTodos(){
+//   return RepositorioUsuario.obertTodos()
+// }

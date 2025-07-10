@@ -1,16 +1,10 @@
 'use client'
-import { useEffect, useState } from "react";
-import { Produto } from "@/core/model/Produto";
-import { obterProdutos2 } from "@/backend/produto/produtos";
 import ProdutoCard from "@/app/components/shared/ProdutoCard";
 import { IconCreditCard, IconCubeSend, IconDeviceDesktop } from "@tabler/icons-react";
+import useProdutos from "@/hooks/useProdutos";
 
 export default function MaisUsadosLista() {
-  const [produtos, setProdutos] = useState<Produto[]>([]);
-
-  useEffect(() => {
-    obterProdutos2().then(setProdutos);
-  }, []);
+  const {produtos} = useProdutos()
 
   return (
     <section className="pt-6 pb-7">

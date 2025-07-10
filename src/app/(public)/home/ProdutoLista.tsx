@@ -1,15 +1,9 @@
 'use client'
-import PromoCard from "@/app/components/shared/PromoCard";
-import { obterProdutos } from "@/backend/produto/produtos";
-import { Produto } from "@/core/model/Produto";
-import { useEffect, useState } from "react";
+import PromoCard from "@/app/components/shared/product/product-card/ProductCard";
+import useProdutos from "@/hooks/useProdutos";
 
 export default function ProdutoLista(){
-  const [produtos, setProdutos] = useState<Produto[]>([])
-
-  useEffect(() => {
-    obterProdutos().then(setProdutos)
-  }, []);
+  const {produtos} = useProdutos()
 
   return (
     <div className="bg-neutral-100 py-15">

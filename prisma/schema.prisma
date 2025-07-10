@@ -20,3 +20,10 @@ model usuarios {
   nome  String
   senha String
 }
+
+model Produto {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  preco     Float
+  imagemUrl String
+}
