@@ -1,4 +1,6 @@
+import obterTodosBeneficios from "./beneficio/obterTodosBeneficios"
 import obterTodosProdutos from "./produto/obterTodosProdutos"
+import obterSlideText from "./slidetext/obterSlideText"
 
 export default class Backend {
   
@@ -6,5 +8,12 @@ export default class Backend {
     // salvar: salvarProduto,
     obter: obterTodosProdutos,
     // excluir: excluirProduto
+  }
+  static readonly beneficio = {
+    obter: obterTodosBeneficios,
+  }
+
+  static readonly slidetext = {
+    obter: obterSlideText,
   }
 }

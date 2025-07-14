@@ -29,3 +29,20 @@ model Produto {
 
   @@map("produto")
 }
+
+model Beneficio {
+  id        Int    @id @default(autoincrement())
+  titulo    String
+  descricao String
+  icon      String
+
+  @@map("beneficio")
+}
+
+model SlideText {
+  id    Int    @id @default(autoincrement())
+  texto String
+  icon  String
+
+  @@map("slidetext")
+}
