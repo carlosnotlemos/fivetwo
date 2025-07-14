@@ -1,0 +1,6 @@
+TRUNCATE TABLE categoria RESTART IDENTITY;
+
+INSERT INTO categoria (nome) VALUES
+  ('DIA DOS PAIS'),
+  ('FEMININO'),
+  ('MASCULINO');
