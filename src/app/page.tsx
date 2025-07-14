@@ -14,9 +14,9 @@ export default function Home() {
     <MainLayout>
       <HeaderBanner />
       <NavBarIcon />
-      <PromoLista />
+      <PromoLista categoria_id={1} />
       <MaisUsadosLista />
-      <PromoLista />
+      <PromoLista categoria_id={2} />
       <SlideText />
       <OutrosProdutosLista />
       <ProdutoLista />

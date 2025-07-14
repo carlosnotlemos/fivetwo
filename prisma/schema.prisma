@@ -22,12 +22,35 @@ model usuarios {
 }
 
 model Produto {
-  id        Int    @id @default(autoincrement())
-  nome      String
-  preco     Float
-  imagemurl String
+  id                Int                @id @default(autoincrement())
+  nome              String
+  preco             Float
+  imagemurl         String
+  categoriaProdutos CategoriaProduto[] // relação com a join table
 
   @@map("produto")
+}
+
+model Categoria {
+  id        Int     @id @default(autoincrement())
+  nome      String  @unique
+  subtitulo String?
+
+  categoriaProdutos CategoriaProduto[] // relação com a join table
+
+  @@map("categoria")
+}
+
+model CategoriaProduto {
+  id           Int @id @default(autoincrement())
+  produto_id   Int
+  categoria_id Int
+
+  produto   Produto   @relation(fields: [produto_id], references: [id])
+  categoria Categoria @relation(fields: [categoria_id], references: [id])
+
+  @@unique([produto_id, categoria_id]) // evita duplicações
+  @@map("categoria_produto") // nome da tabela no banco
 }
 
 model Beneficio {
