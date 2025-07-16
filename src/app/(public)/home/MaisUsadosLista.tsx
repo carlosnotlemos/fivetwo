@@ -1,32 +1,33 @@
 'use client'
 import ProdutoCard from "@/app/components/shared/ProdutoCard";
-import useProdutos from "@/hooks/useProdutos";
 import BenefitCard from "@/app/components/shared/BenefitCard";
 import useBeneficios from "@/hooks/useBeneficios";
+import useCategoriaComProdutos from "@/hooks/useProdutoPorCategoria";
 
-export default function MaisUsadosLista() {
-  const {produtos} = useProdutos()
+export default function   MaisUsadosLista() {
+  const {categoria} = useCategoriaComProdutos(4)
   const {beneficios} = useBeneficios()
 
   return (
-    <section className="pt-6 pb-7">
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-8">
+    <section className="max-w-7xl mx-auto pt-6 pb-7">
+      <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-8">
         {beneficios.map(beneficio => (
-          <BenefitCard
-            key={beneficio.id}
-            titulo={beneficio.titulo} 
-            descricao={beneficio.descricao} 
-            icon={beneficio.icon} 
-          />
+          <li key={beneficio.id}>
+            <BenefitCard beneficio={beneficio} />
+          </li>
         ))}
-      </div>
-      <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12">
-        {produtos.slice(0, 3).map(produto => (
-          <div key={produto.id} className="flex justify-center">
-            <ProdutoCard produto={produto} />
-          </div>
-        ))}
+      </ul>
+
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+        {categoria?.categoriaProdutos?.map(cp =>
+          cp.produto && (
+            <article key={cp.produto.id} className="flex justify-center">
+              <ProdutoCard produto={cp.produto} />
+            </article>
+          )
+        )}
       </div>
     </section>
+
   );
 }

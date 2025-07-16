@@ -1,5 +1,6 @@
 import obterTodosBeneficios from "./beneficio/obterTodosBeneficios"
 import obterCategoriaComProdutos from "./categoria/obterCategoriaComProdutos"
+import obterTodasCategorias from "./categoria/obterTodasCategorias"
 import obterTodosProdutos from "./produto/obterTodosProdutos"
 import obterSlideText from "./slidetext/obterSlideText"
 
@@ -19,6 +20,7 @@ export default class Backend {
   }
 
   static readonly categoria = {
+    obter: obterTodasCategorias,
     obterComProdutos: obterCategoriaComProdutos,
   }
 }

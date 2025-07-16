@@ -7,18 +7,18 @@ import HeaderBanner from './components/shared/HeaderBanner';
 import Faq from './components/shared/Faq';
 import FooterBanner from './components/shared/FooterBanner';
 import MainLayout from './components/template/MainLayout'
-import NavBarIcon from './components/template/navbar/NavBarIcon';
+import CategoryNav from './components/template/navbar/CategoryNav';
 
 export default function Home() {
   return (
     <MainLayout>
       <HeaderBanner />
-      <NavBarIcon />
+      <CategoryNav />
       <PromoLista categoria_id={1} />
       <MaisUsadosLista />
       <PromoLista categoria_id={2} />
       <SlideText />
-      <OutrosProdutosLista />
+      {/* <OutrosProdutosLista /> */}
       <ProdutoLista />
       <FooterBanner/>
       <Faq />

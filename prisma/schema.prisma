@@ -35,6 +35,7 @@ model Categoria {
   id        Int     @id @default(autoincrement())
   nome      String  @unique
   subtitulo String?
+  imagemurl String?
 
   categoriaProdutos CategoriaProduto[] // relação com a join table
 
@@ -69,3 +70,5 @@ model SlideText {
 
   @@map("slidetext")
 }
+
+// Verificar novamente valores que não podem ser nulos nos campos do banco de dados

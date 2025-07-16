@@ -16,4 +16,8 @@ export default class RepositorioCategoria {
       },
     })
   }
+
+  static async obterTodasCategorias(): Promise<Categoria[]> {
+    return await this.db.categoria.findMany()
+  } 
 }

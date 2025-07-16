@@ -5,7 +5,7 @@ export default function ProdutoCard({ produto }: { produto: Produto }) {
   return (
     <div className="w-[350px] h-[600px] relative overflow-hidden rounded-xl shadow-lg bg-black group">
       <img
-        src="/camisa1.png"
+        src={produto.imagemurl}
         alt={produto.nome}
         className="w-full h-full object-cover"
       />
