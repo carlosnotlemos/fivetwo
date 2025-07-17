@@ -71,4 +71,12 @@ model SlideText {
   @@map("slidetext")
 }
 
+model FooterBannerImg {
+  id        Int    @id @default(autoincrement())
+  nome      String
+  imagemurl String
+
+  @@map("footer_banner_imgs")
+}
+
 // Verificar novamente valores que não podem ser nulos nos campos do banco de dados

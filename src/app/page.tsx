@@ -5,7 +5,7 @@ import PromoLista from './(public)/home/PromoLista';
 import SlideText from './(public)/home/SlideText';
 import HeaderBanner from './components/shared/HeaderBanner';
 import Faq from './components/shared/Faq';
-import FooterBanner from './components/shared/FooterBanner';
+import FooterBanner from './components/shared/footerbanner/FooterBanner';
 import MainLayout from './components/template/MainLayout'
 import CategoryNav from './components/template/navbar/CategoryNav';
 
