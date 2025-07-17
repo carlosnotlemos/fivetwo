@@ -1,10 +1,10 @@
 import MaisUsadosLista from './(public)/home/MaisUsadosLista';
-import OutrosProdutosLista from './(public)/home/OutrosProdutosLista';
+// import OutrosProdutosLista from './(public)/home/OutrosProdutosLista';
 import ProdutoLista from './(public)/home/ProdutoLista';
 import PromoLista from './(public)/home/PromoLista';
 import SlideText from './(public)/home/SlideText';
 import HeaderBanner from './components/shared/HeaderBanner';
-import Faq from './components/shared/Faq';
+import Faq from './components/shared/faq/Faq';
 import FooterBanner from './components/shared/footerbanner/FooterBanner';
 import MainLayout from './components/template/MainLayout'
 import CategoryNav from './components/template/navbar/CategoryNav';

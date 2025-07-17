@@ -1,4 +1,3 @@
-// hooks/useCursorDirection.ts
 import { useEffect, useState } from "react"
 
 export function useCursorDirection(showCursor: boolean) {
