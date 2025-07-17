@@ -1,6 +1,6 @@
-TRUNCATE TABLE categoria_produto RESTART IDENTITY;
+TRUNCATE TABLE categorias_produtos RESTART IDENTITY;
 
-INSERT INTO categoria_produto (produto_id, categoria_id) VALUES
+INSERT INTO categorias_produtos (produto_id, categoria_id) VALUES
   ('1', '3'),
   ('2', '3'),
   ('3', '3'),
