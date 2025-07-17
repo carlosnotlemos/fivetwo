@@ -19,10 +19,9 @@ export default function   MaisUsadosLista() {
       </ul>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
-        {categoria?.categoriaProdutos?.map(cp =>
-          cp.produto && (
-            <article key={cp.produto.id} className="flex justify-center">
-              <ProdutoCard produto={cp.produto} />
+        {beneficios.map(beneficioCard => (
+            <article key={beneficioCard.id} className="flex justify-center">
+              <ProdutoCard beneficio={beneficioCard} />
             </article>
           )
         )}

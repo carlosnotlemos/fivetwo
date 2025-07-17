@@ -1,12 +1,13 @@
+import { Beneficio } from '@/core/model/Beneficio'
 import { Produto } from '@/core/model/Produto'
 import Link from 'next/link'
 
-export default function ProdutoCard({ produto }: { produto: Produto }) {
+export default function ProdutoCard({ beneficio }: { beneficio: Beneficio }) {
   return (
     <div className="w-[350px] h-[600px] relative overflow-hidden rounded-xl shadow-lg bg-black group">
       <img
-        src={produto.imagemurl}
-        alt={produto.nome}
+        src={beneficio.imagemurl}
+        alt={beneficio.titulo}
         className="w-full h-full object-cover"
       />
 

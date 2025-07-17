@@ -3,4 +3,5 @@ export interface Beneficio {
   titulo: string
   descricao: string
   icon: string
+  imagemurl: string
 }
