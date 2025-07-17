@@ -14,32 +14,25 @@ datasource db {
   url      = env("DATABASE_URL")
 }
 
-model usuarios {
-  id    String @id @default(cuid())
-  email String @unique
-  nome  String
-  senha String
-}
-
 model Produto {
   id                Int                @id @default(autoincrement())
   nome              String
   preco             Float
   imagemurl         String
-  categoriaProdutos CategoriaProduto[] // relação com a join table
+  categoriaProdutos CategoriaProduto[]
 
-  @@map("produto")
+  @@map("produtos")
 }
 
 model Categoria {
   id        Int     @id @default(autoincrement())
   nome      String  @unique
-  subtitulo String?
-  imagemurl String?
+  subtitulo String
+  imagemurl String
 
-  categoriaProdutos CategoriaProduto[] // relação com a join table
+  categoriaProdutos CategoriaProduto[] 
 
-  @@map("categoria")
+  @@map("categorias")
 }
 
 model CategoriaProduto {
@@ -50,8 +43,8 @@ model CategoriaProduto {
   produto   Produto   @relation(fields: [produto_id], references: [id])
   categoria Categoria @relation(fields: [categoria_id], references: [id])
 
-  @@unique([produto_id, categoria_id]) // evita duplicações
-  @@map("categoria_produto") // nome da tabela no banco
+  @@unique([produto_id, categoria_id])
+  @@map("categorias_produtos") 
 }
 
 model Beneficio {
@@ -59,8 +52,9 @@ model Beneficio {
   titulo    String
   descricao String
   icon      String
+  imagemurl String
 
-  @@map("beneficio")
+  @@map("beneficios")
 }
 
 model SlideText {
@@ -68,7 +62,7 @@ model SlideText {
   texto String
   icon  String
 
-  @@map("slidetext")
+  @@map("slidetexts")
 }
 
 model FooterBannerImg {
@@ -84,7 +78,5 @@ model Faq {
   pergunta String
   resposta String
 
-  @@map("faq")
+  @@map("faqs")
 }
-
-// Verificar novamente valores que não podem ser nulos nos campos do banco de dados
