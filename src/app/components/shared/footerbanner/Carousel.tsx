@@ -10,7 +10,7 @@ export default function Carousel({imagens, indice}: {imagens: FooterBannerImg[];
           alt=""
           draggable={false}
           className={`
-            absolute inset-0 w-full h-full object-contain transition-all duration-500 ease-in-out
+            absolute inset-0 w-full h-full object-cover transition-all duration-500 ease-in-out
             ${indice === i ? 'opacity-100 scale-100 z-20' : 'opacity-0 scale-105 z-10'}
             select-none
           `}
