@@ -7,7 +7,7 @@ export interface NavItemProps{
 
 export default function NavItem(props: NavItemProps){
   return (
-    <Link href={props.url} className="hover:font-semibold">
+    <Link href={props.url} className="uppercase">
       <span>{props.texto}</span>
     </Link>
   )
