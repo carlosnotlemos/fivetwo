@@ -2,6 +2,7 @@
 import { useState } from "react";
 import useFaq from "@/hooks/useFaq";
 import FaqItem from "./FaqItem";
+import Link from "next/link";
 
 export default function Faq() {
   const { faqs } = useFaq();
@@ -31,10 +32,17 @@ export default function Faq() {
       </div>
 
       <div className="p-10 text-center">
-        <p className="mb-4">Nosso suporte está disponível de segunda a sexta das: 9:00 às 18:00.</p>
-        <button className="text-white bg-blue-500 hover:bg-blue-600 rounded-lg text-lg py-4 px-10 transition">
+        <p className="mb-4">
+          Nosso suporte está disponível de segunda a sexta das 9:00 às 18:00.
+        </p>
+        <a
+          href="https://wa.me/85986540523"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-white bg-blue-500 hover:bg-blue-600 rounded-lg text-lg py-4 px-10 transition inline-block"
+        >
           Suporte
-        </button>
+        </a>
       </div>
     </section>
   );
