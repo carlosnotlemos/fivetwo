@@ -15,11 +15,11 @@ export default function PromoLista({categoria_id}: PromoListaProps) {
   if (!categoria) return null
 
   return (
-    <section className="bg-neutral-100 pt-10 pb-7">
+    <section className="bg-light-odd pt-10 pb-15">
       <div className="w-full">
         {/* Título */}
-        <h1 className="text-4xl font-bold mb-2 ml-40">{categoria.nome}</h1>
-        <p className="text-neutral-800 mb-6 ml-40">{categoria.subtitulo}</p>
+        <h1 className="text-4xl font-bold mb-2 ml-40 text-gray-700">{categoria.nome}</h1>
+        <p className="text-neutral-800 mb-6 ml-40 ">{categoria.subtitulo}</p>
 
         {/* Lista de produtos */}
         <ul

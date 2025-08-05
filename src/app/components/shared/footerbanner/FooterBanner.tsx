@@ -16,8 +16,8 @@ export default function FooterBanner() {
   const anterior = () => setIndice((i) => (i - 1 + FBImgs.length) % FBImgs.length)
 
   return (
-    <section className="w-full h-full relative">
-      <h2 className="text-3xl text-center font-bold py-4">😉 sem regras, só conforto</h2>
+    <section className="w-full h-full relative bg-light-odd">
+      <h2 className="text-3xl text-center font-bold py-4 text-gray-700">;) sem regras, só conforto</h2>
 
       <div
         onClick={() => (direcao === 'left' ? anterior() : proxima())}

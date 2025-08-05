@@ -13,7 +13,7 @@ export default function FaqItem({ pergunta, resposta, aberto, onToggle }: FaqIte
       {/* Pergunta */}
       <button
         onClick={onToggle}
-        className="w-full flex justify-between items-center text-left font-semibold text-gray-800 cursor-pointer"
+        className="w-full flex justify-between items-center text-left font-semibold text-neutral-300 cursor-pointer"
         aria-expanded={aberto}
       >
         <span>{pergunta}</span>
@@ -24,7 +24,7 @@ export default function FaqItem({ pergunta, resposta, aberto, onToggle }: FaqIte
       </button>
       {/* Resposta */}
       <div
-        className={`text-gray-700 text-sm leading-relaxed transition-all duration-300 ease-in-out overflow-hidden ${
+        className={`text-neutral-400 text-sm leading-relaxed transition-all duration-300 ease-in-out overflow-hidden ${
           aberto ? "max-h-[500px] opacity-100 mt-2" : "max-h-0 opacity-0"
         }`}
         aria-hidden={!aberto}
@@ -32,7 +32,7 @@ export default function FaqItem({ pergunta, resposta, aberto, onToggle }: FaqIte
         {resposta}
       </div>
       {/* Divisor */}
-      <hr className="my-4 border-blue-300" />
+      <hr className="my-4 border-gray-900" />
     </div>
   );
 }

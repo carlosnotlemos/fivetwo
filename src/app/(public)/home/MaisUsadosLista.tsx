@@ -9,7 +9,7 @@ export default function   MaisUsadosLista() {
   const {beneficios} = useBeneficios()
 
   return (
-    <section className="max-w-7xl mx-auto pt-6 pb-7">
+    <section className="max-w-7xl mx-auto pt-6 mt-3 pb-7">
       <ul className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center mb-8">
         {beneficios.map(beneficio => (
           <li key={beneficio.id}>
@@ -18,7 +18,7 @@ export default function   MaisUsadosLista() {
         ))}
       </ul>
 
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-8">
         {beneficios.map(beneficioCard => (
             <article key={beneficioCard.id} className="flex justify-center">
               <ProdutoCard beneficio={beneficioCard} />

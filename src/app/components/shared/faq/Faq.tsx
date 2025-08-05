@@ -14,11 +14,11 @@ export default function Faq() {
 
   return (
     <section className="bg-neutral-100">
-      <h1 className="text-5xl text-center font-bold pt-12">FAQ</h1>
+      <h1 className="text-5xl text-center font-bold pt-12 text-gray-700">FAQ</h1>
       <p className="text-center p-8">Veja as perguntas mais frequentes de nossos clientes.</p>
 
       <div className="max-w-3xl mx-auto px-4">
-        <div className="bg-blue-100 rounded-xl shadow-md p-6 space-y-4 border border-blue-200">
+        <div className="bg-gray-800 rounded-xl shadow-md p-6 space-y-4 border border-blue-200">
           {faqs.map((item) => (
             <FaqItem
               key={item.id}
@@ -35,14 +35,25 @@ export default function Faq() {
         <p className="mb-4">
           Nosso suporte está disponível de segunda a sexta das 9:00 às 18:00.
         </p>
-        <a
-          href="https://wa.me/85986540523"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-white bg-blue-500 hover:bg-blue-600 rounded-lg text-lg py-4 px-10 transition inline-block"
-        >
-          Suporte
-        </a>
+          <a
+            href="https://wa.me/85986540523"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="
+              inline-block
+              py-4 px-10
+              text-lg
+              text-white bg-orange-500
+              rounded-lg
+              border-2 border-orange-500
+              transition
+
+              hover:bg-transparent
+              hover:text-orange-500
+            "
+          >
+            Suporte
+          </a>
       </div>
     </section>
   );
